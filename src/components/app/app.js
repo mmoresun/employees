@@ -138,10 +138,15 @@ class App extends Component {
 
         if (item.id == id) {
 
-          return { ...item, starSwitch: !item.starSwitch }
+          return {  
+
+            ...item, starSwitch: !item.starSwitch,
+            rise: !item.rise
+
+          }
         }
 
-        return item;
+        return item; // возвращаем старый элемент, если if не выполнился
 
       })
 
@@ -206,7 +211,7 @@ class App extends Component {
 
     const employees = this.state.data.length; // посчитали число сотрудников
 
-    const employIncreased = this.state.data.filter(item => item.increase).length //метод filter перебирает наш массив и возвращает новый, где есть только те элементы, для которых increase: true, это список сотрудников на повышение. добавляем length - получаем число сотрудников на повышение
+    const employIncreased = this.state.data.filter(item => item.rise).length //метод filter перебирает наш массив и возвращает новый, где есть только те элементы, для которых increase: true, это список сотрудников на повышение. добавляем length - получаем число сотрудников на повышение
 
     return (
 
@@ -226,7 +231,7 @@ class App extends Component {
             onUpdateSearch={this.onUpdateSearch} // прописываем в панели поиска вызов метода onUpdateSearch, устанавливающий состояние для term внутри state
           />
 
-          <AppFilter 
+          <AppFilter
             filter={filter}
             onFilterSelect={this.onFilterSelect}
           />

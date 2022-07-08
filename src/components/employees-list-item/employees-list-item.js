@@ -25,8 +25,7 @@ const EmployeesListItem = (props) => {
             <span
 
                 className="list-group-item-label"
-                onClick={onToggleIncrease}
-                
+                onClick={onToggleIncrease}   // функция "отправить на повышение"
 
             >
                 {name}
@@ -46,7 +45,7 @@ const EmployeesListItem = (props) => {
                 <button type="button"
 
                     className="btn-cookie btn-sm "
-                    onClick={onToggleRise}
+                    onClick={onToggleRise} // функция "выдать премию"
                     
                 >
 

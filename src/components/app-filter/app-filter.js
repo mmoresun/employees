@@ -34,24 +34,6 @@ const AppFilter = (props) => {
 
         {buttons}
 
-            {/* <button
-                className="btn btn-light"
-                type='button'>
-                Все сотрудники
-            </button>
-
-            <button
-                className="btn btn-outline-light"
-                type='button'>
-                На повышение
-            </button>
-
-            <button
-                className="btn btn-outline-light"
-                type='button'>
-                Зарплата больше $1000
-            </button> */}
-
         </div>
 
     )

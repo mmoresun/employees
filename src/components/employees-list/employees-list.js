@@ -4,7 +4,7 @@ import './employees-list.css';
 
 const EmployeesList = ({ data, onDelete, onToggleIncrease, onToggleRise }) => {
 
-    const elememts = data.map(item => {
+    const elements = data.map(item => {
 
         const {id, ...itemProps} = item; // здесь мы выделяем из массива свойство item и объединяем всё, кроме него, в itemProps
 
@@ -32,7 +32,7 @@ const EmployeesList = ({ data, onDelete, onToggleIncrease, onToggleRise }) => {
 
         <ul className="app-list list-group"> 
 
-            {elememts}             
+            {elements}             
 
         </ul>
     )

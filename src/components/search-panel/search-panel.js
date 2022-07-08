@@ -25,7 +25,7 @@ class SearchPanel extends Component {
         this.props.onUpdateSearch(term); // "пробрасываем" term наверх в App, вызывая props, который нам пришел   
         // это называется "поднятие локального состояния родителю"
 
-        // console.log('Сейчас в term в searchpanel' + this.state.term);
+        // console.log('Сейчас в term в searchpanel' + this.state.term); // проверяем, передаётся ли
 
     }
 
@@ -38,7 +38,6 @@ class SearchPanel extends Component {
                 type="text"
                 className="form-control search-input"
                 placeholder="Найти сотрудника"
-
                 value={this.state.term} // передаем term в качестве значения
                 onChange={this.searchUpdate} // по событию onChange (набор текста) вызывается метод searchUpdate
             />
